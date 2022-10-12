@@ -49,7 +49,8 @@ def get_parameters(header: Dict) -> None:
 
 
 def get_median(data: np.ndarray)-> int:
-    pass
+    """Print the median of the data matrix"""
+    print("Median:", np.median(data))
 
 
 def main(filename: Path)-> None:
