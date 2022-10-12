@@ -18,11 +18,37 @@ def read_fits(filename: Path)-> Tuple[Dict, np.ndarray]:
     return header, data
 
 
-def get_parameters(value):
-    pass
+def _hms_to_dd(value: str) -> float:
+    """Helper function: convert a HH:MM:SS string to decimal degrees"""
+    hh, mm, ss = [float(x) for x in value.strip().split(":")]
+    dd = 15 * hh + mm / 4.0 + ss / 240
+    return dd
 
 
-def get_median(value):
+def _deg_to_dd(value:str) -> float:
+    """Helper function: convert dg:mn:sc to decimal degrees"""
+    dg, mn, sc = [float(x) for x in value.strip().split(":")]
+    if dg >= 0:
+        dd = dg + mn / 60 + sc / 3600
+    else:
+        dd = dg - mn / 60 - sc / 3600
+    return dd
+
+
+def get_parameters(header: Dict) -> None:
+    """Print RA, DEC, Integration time from a HDU list"""
+
+    params = {
+        "RA": [_hms_to_dd(header["RA"]), "°"],
+        "DEC":[ _deg_to_dd(header["DEC"]), "°"],
+        "Integration_time": [header["EXPTIME"], 'sec'],
+    }
+
+    for key, val in params.items():
+        print(key, ": ", val[0], val[1])
+
+
+def get_median(data: np.ndarray)-> int:
     pass
 
 
