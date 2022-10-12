@@ -348,7 +348,7 @@ Y_IMAGE                  Object position along y                                
 #NOISEAREA_MODEL          Equivalent noise area of the fitted model                 [pixel**2]
 #FLUX_BACKOFFSET          Background offset from fitting                            [count]
 #FLUXERR_BACKOFFSET       RMS error on fitted background offset                     [count]
-FLUX_POINTSOURCE         Point source flux from fitting                            [count]
+# FLUX_POINTSOURCE         Point source flux from fitting                            [count]
 #FLUXERR_POINTSOURCE      RMS error on fitted point source total flux               [count]
 #FLUXRATIO_POINTSOURCE    Point-source flux-to-total ratio from fitting            
 #FLUXRATIOERR_POINTSOURCE RMS error on point-source flux-to-total ratio            
