@@ -1,6 +1,6 @@
 #NUMBER                   Running object number                                    
 #EXT_NUMBER               FITS extension number                                    
-# FLUX_ISO                 Isophotal flux                                            [count]
+FLUX_ISO                 Isophotal flux                                            [count]
 #FLUXERR_ISO              RMS error for isophotal flux                              [count]
 #MAG_ISO                  Isophotal magnitude                                       [mag]
 #MAGERR_ISO               RMS error for isophotal magnitude                         [mag]
